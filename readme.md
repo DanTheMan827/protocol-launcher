@@ -1,4 +1,4 @@
- # Protocol Launcher
+# Protocol Launcher
 This is a very simple tool meant to be used with Steam or any other game management application that doesn't allow shortcuts to URLs.
 
 ## Usage
