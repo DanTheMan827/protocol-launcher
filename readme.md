@@ -2,7 +2,7 @@
 This is a very simple tool meant to be used with Steam or any other game management application that doesn't allow shortcuts to URLs.
 
 ## Usage
-Usage is simple, add Protocol_Launcher.exe to your steam library and go into the properties for the shortcut.
+Usage is simple, add protocol-launcher.exe to your steam library and go into the properties for the shortcut.
 
 Under launch options, specify your URL (e.g. forzamotorsportapex://)
 
