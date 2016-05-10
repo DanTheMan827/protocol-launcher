@@ -11,7 +11,12 @@ Module modMain
         Dim customExeDataPosition As Integer = exeDataString.LastIndexOf(customExeDataKeywod)
         If customExeDataPosition > 0 Then
             Dim customLaunchCommand = exeDataString.Substring(customExeDataPosition + customExeDataKeywod.Length + 1)
-            launch(customLaunchCommand, exeDataString.Substring(customExeDataPosition + customExeDataKeywod.Length, 1) = "y")
+            Dim closeAfterLaunch As Boolean = exeDataString.Substring(customExeDataPosition + customExeDataKeywod.Length, 1) = "y"
+            exeData = Nothing
+            exeDataString = Nothing
+            customExeDataKeywod = Nothing
+            customExeDataPosition = Nothing
+            launch(customLaunchCommand, closeAfterLaunch)
         Else
             If sArgs.Length = 0 Then
                 Console.WriteLine("Enter a custom URL")
@@ -39,7 +44,7 @@ Module modMain
                     End If
                 End With
             ElseIf sArgs.Length = 1 Then
-                launch(sArgs(0), True)
+                launch(sArgs(0), False)
             End If
         End If
     End Sub
